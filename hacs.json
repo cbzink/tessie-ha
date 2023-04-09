@@ -1,0 +1,7 @@
+{
+    "name": "Tessie",
+    "filename": "release.zip",
+    "homeassistant": "2023.4.0",
+    "render_readme": true,
+    "zip_release": true
+}
