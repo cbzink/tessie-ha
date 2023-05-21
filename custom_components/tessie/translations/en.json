@@ -9,7 +9,8 @@
                 "data": {
                     "access_token": "Access Token"
                 },
-                "title": "Connect to Tessie"
+                "title": "Connect to Tessie",
+                "description": "Get your API Key from https://my.tessie.com/settings/api"
             }
         }
     }

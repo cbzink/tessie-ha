@@ -3,5 +3,6 @@
     "filename": "release.zip",
     "homeassistant": "2023.4.0",
     "render_readme": true,
-    "zip_release": true
+    "zip_release": true,
+    "hacs": "0.0.2"
 }
