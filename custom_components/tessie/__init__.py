@@ -81,7 +81,7 @@ class TessieEntity(CoordinatorEntity):
         super().__init__(coordinator)
 
         self.vin = vin
-        self.vehicle_name = coordinator.data[vin].display_name
+        self.vehicle_name = coordinator.data[vin]["last_state"]["display_name"]
         self.tessie = tessie
 
     @property

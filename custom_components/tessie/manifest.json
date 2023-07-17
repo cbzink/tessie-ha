@@ -10,5 +10,5 @@
     "requirements": [
         "git+https://github.com/cbzink/tessiepy.git@master#tessiepy==0.0.4"
     ],
-    "version": "0.0.4"
+    "version": "0.0.5"
 }
