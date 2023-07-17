@@ -46,7 +46,7 @@ class PluggedInBinarySensor(TessieEntity, BinarySensorEntity):
     @property
     def is_on(self):
         return (
-            self.coordinator.data[self.vin].charge_state.charge_port_latch == "Engaged"
+            self.coordinator.data[self.vin]["last_state"]["charge_state"]["charge_port_latch"] == "Engaged"
         )
 
 
@@ -63,4 +63,4 @@ class ChargingBinarySensor(TessieEntity, BinarySensorEntity):
 
     @property
     def is_on(self):
-        return self.coordinator.data[self.vin].charge_state.charging_state == "Charging"
+        return self.coordinator.data[self.vin]["last_state"]["charge_state"]["charging_state"] == "Charging"

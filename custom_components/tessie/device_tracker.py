@@ -41,11 +41,11 @@ class VehicleDeviceTrackerEntity(TessieEntity, TrackerEntity):
 
     @property
     def latitude(self) -> float | None:
-        return self.coordinator.data[self.vin].drive_state.latitude
+        return self.coordinator.data[self.vin]["last_state"]["drive_state"]["latitude"]
 
     @property
     def longitude(self) -> float | None:
-        return self.coordinator.data[self.vin].drive_state.longitude
+        return self.coordinator.data[self.vin]["last_state"]["drive_state"]["longitude"]
 
     @property
     def source_type(self) -> SourceType:

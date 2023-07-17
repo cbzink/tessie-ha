@@ -55,19 +55,19 @@ class ChargeLimitNumberEntity(TessieEntity, NumberEntity):
     def native_value(self) -> int:
         """Return charge limit."""
 
-        return self.coordinator.data[self.vin].charge_state.charge_limit_soc
+        return self.coordinator.data[self.vin]["last_state"]["charge_state"]["charge_limit_soc"]
 
     @property
     def native_min_value(self) -> int:
         """Return minimum charge limit."""
 
-        return self.coordinator.data[self.vin].charge_state.charge_limit_soc_min
+        return self.coordinator.data[self.vin]["last_state"]["charge_state"]["charge_limit_soc_min"]
 
     @property
     def native_max_value(self) -> int:
         """Return maximum charge limit."""
 
-        return self.coordinator.data[self.vin].charge_state.charge_limit_soc_max
+        return self.coordinator.data[self.vin]["last_state"]["charge_state"]["charge_limit_soc_max"]
 
     @property
     def native_unit_of_measurement(self) -> str:

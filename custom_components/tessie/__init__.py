@@ -88,8 +88,8 @@ class TessieEntity(CoordinatorEntity):
     def device_info(self):
         return DeviceInfo(
             identifiers={(DOMAIN, self.vin)},
-            name=self.coordinator.data[self.vin].display_name,
+            name=self.coordinator.data[self.vin]["last_state"]["display_name"],
             manufacturer="Tesla",
-            model=self.coordinator.data[self.vin].vehicle_config.car_type,
-            sw_version=self.coordinator.data[self.vin].vehicle_state.car_version,
+            model=self.coordinator.data[self.vin]["last_state"]["vehicle_config"]["car_type"],
+            sw_version=self.coordinator.data[self.vin]["last_state"]["vehicle_state"]["car_version"],
         )
